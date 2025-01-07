@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    form{
+      background-color: rgb(116, 231, 242);
+      border: 10px solid rgb(2, 86, 122);
+      width: 370px;
+      height: 240px;
+      text-align: center;
+      margin-left: 37%;
+      padding: 20px;
+    }
+    
+    h2{
+      text-align: center;
+    }
+    
+    /* Media query for mobile screens */
+    @media screen and (max-width: 768px) {
+      form {
+        width: 90%;  /* Make the form width 90% of the screen width */
+        margin-left: 5%;  /* Center align the form */
+        height: auto;  /* Allow the form to grow with the content */
+      }
+
+      h2 {
+        font-size: 1.5em; /* Reduce font size for better visibility */
+      }
+
+      input[type="text"], input[type="password"] {
+        width: 100%;  /* Make input fields take up the full width */
+        padding: 10px;
+        font-size: 1em;  /* Larger text for easier input */
+        margin: 10px 0;  /* Add spacing between input fields */
+      }
+
+      input[type="submit"] {
+        width: 100%;  /* Make the submit button take up full width */
+        padding: 10px;
+        font-size: 1.2em;  /* Adjust button font size */
+      }
+    }
+  </style>
+
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    function validateForm() {
+      let x = document.forms["myForm"]["lname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    function validateForm() {
+      let x = document.forms["myForm"]["ename"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    function validateForm() {
+      let x = document.forms["myForm"]["pname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+
+<h2><b><u>JavaScript Validation</u></b></h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name:<br> 
+  <input type="text" name="fname">
+  <br>
+  
+  Last Name:<br> 
+  <input type="text" name="lname"><br>
+  
+  E-mail:<br> 
+  <input type="text" name="ename">
+  <br>
+  
+  Password: <br>
+  <input type="password" name="pname">
+  <br> <br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
